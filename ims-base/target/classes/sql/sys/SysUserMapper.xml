@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.edu.gzgs.ims.dao.SysUserDao">
+    <resultMap id="userMap" type="cn.edu.gzgs.ims.entity.SysUser">
+        <id column="user_id" property="userId" />
+        <result column="user_name" property="userName" />
+        <result column="pwd" property="pwd" />
+        <result column="email" property="email" />
+        <result column="sex" property="sex" />
+        <result column="create_time" property="createTime" />
+        <result column="user_statu" property="userStatu" />
+        <result column="last_login_time" property="lastLoginTime" />
+        <collection property="roles" resultMap="cn.edu.gzgs.ims.dao.SysRoleDao.roleMap"></collection>
+    </resultMap>
+
+    <select id="queryOneLoginUser" resultMap="userMap">
+        SELECT
+            u.user_id,
+            u.user_name,
+            u.pwd,
+            u.email,
+            u.sex,
+            u.create_time,
+            u.user_statu,
+            r.role_id,
+            r.`name`,
+            r.`code`,
+            r.remark,
+            r.role_statu
+        FROM
+            sys_user u
+                INNER JOIN sys_user_role ur ON u.user_id = ur.user_id
+                INNER JOIN sys_role r ON r.role_id = ur.role_id
+        WHERE
+            u.user_statu = 0 and user_name = #{username}
+    </select>
+</mapper>
+

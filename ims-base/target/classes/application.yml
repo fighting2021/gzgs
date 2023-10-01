@@ -1,0 +1,33 @@
+server:
+  port: 8888
+spring:
+  application:
+    name: ims
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  # mysql数据库
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://127.0.0.1:3306/ims?serverTimezone=UTC
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  #在这里配置redis相关的连接   host:ip地址  port:端口   password:访问密码
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    password: admin
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+# mybatis plus相关配置
+mybatis-plus:
+  #扫描mapper映射文件
+  mapper-locations: classpath*:sql/**/*.xml
+  #打印sql语句
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # 如果查询结果中包含空值的列，则 MyBatis 在映射的时候，不会映射这个字段
+    call-setters-on-nulls: true
+    # 是否开启自动驼峰命名规则映射:从数据库列名到Java属性驼峰命名的类似映射
+    map-underscore-to-camel-case: true
