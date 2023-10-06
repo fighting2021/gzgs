@@ -1,1 +1,3 @@
 /ims-base/target/
+.idea/
+*.iml
