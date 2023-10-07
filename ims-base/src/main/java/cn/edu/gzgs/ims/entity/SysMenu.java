@@ -1,6 +1,7 @@
 package cn.edu.gzgs.ims.entity;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -14,6 +15,7 @@ import java.util.List;
 @ApiModel(value="SysMenu对象", description="菜单表")
 public class SysMenu implements Serializable {
     private static final long serialVersionUID = 1L;
+    @TableId
     @ApiModelProperty(value = "菜单id")
     private Long menuId;
     @ApiModelProperty(value = "父级id, 根菜单为0")

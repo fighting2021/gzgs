@@ -71,7 +71,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             , "/swagger-resources/**"
             , "/webjars/springfox-swagger-ui/**"
             , "/v2/api-docs"
-
     };
 
     @Override

@@ -17,8 +17,6 @@
 5.从github上下载项目到本地，然后导入到IDEA；
 6.修改配置文件（数据库的地址、账号、密码之类）
 7.运行cn.edu.gzgs.ims.Application类，启动项目。
-  启动成功后，在浏览器输入http://localhost:8888/swagger-ui.html，打开swagger-ui首页。
-  （推荐使用postman工具进行测试）
 
 三、测试：
 ————————————————————————————————————————————————

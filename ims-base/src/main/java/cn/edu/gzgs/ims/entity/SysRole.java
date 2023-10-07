@@ -1,5 +1,6 @@
 package cn.edu.gzgs.ims.entity;
 
+import com.baomidou.mybatisplus.annotation.TableId;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
@@ -13,6 +14,7 @@ import java.util.Date;
 @ApiModel(value="SysRole对象", description="角色表")
 public class SysRole implements Serializable {
     private static final long serialVersionUID = 1L;
+    @TableId
     @ApiModelProperty(value = "编号")
     private Long roleId;
     @ApiModelProperty(value = "角色名")
