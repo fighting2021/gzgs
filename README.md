@@ -76,7 +76,7 @@
   第三步：重新测试查询和删除，观察不同状态下的返回结果：<br/>
 
 #### 四、参考资料
-https://blog.csdn.net/qq_46090071/article/details/126891101?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169576932716800192260228%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=169576932716800192260228&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-126891101-null-null.142^v94^insert_down28v1&utm_term=springboot%20mybatisplus%20Spring%20Security%20jwt%20swaggerui&spm=1018.2226.3001.4187
+[Springboot + Spring Security + Jwt 前后端分离认证授权](https://blog.csdn.net/qq_46090071/article/details/126891101?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522169576932716800192260228%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=169576932716800192260228&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-1-126891101-null-null.142^v94^insert_down28v1&utm_term=springboot%20mybatisplus%20Spring%20Security%20jwt%20swaggerui&spm=1018.2226.3001.4187)
 
 
 #### 五、项目结构
