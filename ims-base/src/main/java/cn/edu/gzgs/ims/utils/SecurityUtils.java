@@ -23,4 +23,5 @@ public class SecurityUtils {
             throw new RuntimeException("获取用户信息异常");
         }
     }
+
 }

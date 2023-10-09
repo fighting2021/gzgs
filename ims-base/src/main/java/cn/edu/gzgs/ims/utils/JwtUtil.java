@@ -94,11 +94,22 @@ public class JwtUtil {
      * @return
      * @throws Exception
      */
-    public static Claims parseJWT(String jwt) throws Exception {
+    private static Claims parseJWT(String jwt) throws Exception {
         SecretKey secretKey = generalKey();
         return Jwts.parser()
                 .setSigningKey(secretKey)
                 .parseClaimsJws(jwt)
                 .getBody();
+    }
+
+    /**
+     * 获取登录用户ID
+     *
+     * @param jwt
+     * @return
+     */
+    public static String getUserId(String jwt) throws Exception {
+        Claims claims = JwtUtil.parseJWT(jwt);
+        return claims.getSubject();
     }
 }

@@ -35,8 +35,7 @@ public class JwtAuthenticationTokenFilter extends OncePerRequestFilter {
         //解析token
         String uuid;
         try {
-            Claims claims = JwtUtil.parseJWT(token);
-            uuid = claims.getSubject();
+            uuid = JwtUtil.getUserId(token);
         } catch (Exception e) {
             request.setAttribute("filterError",  new RuntimeException(ErrorCode.LOGIN_TIME_EXPIRED.getMessage()));
             request.getRequestDispatcher("/error/throw").forward(request,response);

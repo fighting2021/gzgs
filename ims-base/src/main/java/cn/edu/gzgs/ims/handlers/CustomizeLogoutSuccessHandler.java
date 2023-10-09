@@ -24,10 +24,8 @@ public class CustomizeLogoutSuccessHandler implements LogoutSuccessHandler {
     public void onLogoutSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         String token = request.getHeader("token");
         //解析token
-        String userId;
         try {
-            Claims claims = JwtUtil.parseJWT(token);
-            userId = claims.getSubject();
+            String userId = JwtUtil.getUserId(token);
             redisCache.deleteObject("login:" + userId);
         } catch (Exception e) {
             e.printStackTrace();

@@ -146,7 +146,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 System.out.println("user cache key: login:" + uuid);
                 //把token响应给前端
                 WrapperResult<Object> result = WrapperResult.success(jwt, "登录成功");
-                System.out.println("Token: " + jwt);
                 httpServletResponse.setContentType("text/json;charset=utf-8");
                 //塞到HttpServletResponse中返回给前台
                 httpServletResponse.getWriter().write(JSON.toJSONString(result));
